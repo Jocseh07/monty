@@ -1,0 +1,11 @@
+{
+  "files.associations": {
+    "stdio.h": "c",
+    "chrono": "c",
+    "variant": "c",
+    "algorithm": "c",
+    "format": "c",
+    "stdlib.h": "c",
+    "monty.h": "c"
+  }
+}
