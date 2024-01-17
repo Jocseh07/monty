@@ -1,4 +1,5 @@
 #include "monty.h"
+__attribute((unused)) store_t store = {NULL, NULL, NULL, 0};
 
 /**
  * main - main function of the program
@@ -10,8 +11,6 @@
 int main(int ac, char **av)
 {
 	stack_t *stack = NULL;
-
-	__attribute((unused)) store_t store = {NULL, NULL, NULL, 0};
 
 	if (ac != 2)
 	{
