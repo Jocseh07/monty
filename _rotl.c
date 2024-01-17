@@ -11,7 +11,7 @@ void _rotl(stack_t **head, unsigned int count)
 {
 	stack_t *temp;
 	stack_t *temp2;
-	int a;
+	int a = 0;
 	(void)count;
 
 	temp = *head;
