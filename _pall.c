@@ -7,9 +7,16 @@
  * Return: None
  */
 
-void _pall(stack_t **head, unsigned int count)
+void _pall(stack_t **head, __attribute__((unused)) unsigned int count)
 {
-	(void)count;
+	stack_t *temp;
 
-	print_dlistint(*head);
+	temp = *head;
+	if (temp == NULL)
+		return;
+	while (temp != NULL)
+	{
+		printf("%d\n", temp->n);
+		temp = temp->next;
+	}
 }

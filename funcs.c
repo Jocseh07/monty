@@ -19,51 +19,32 @@ void free_dlistint(stack_t *head)
 }
 
 /**
- * print_dlistint - prints all emenents of list
- * @h: head of list
- * Return: number of nodes
- */
-
-void print_dlistint(stack_t *h)
-{
-	if (h == NULL)
-		return;
-
-	while (h != NULL)
-	{
-		printf("%d\n", h->n);
-		h = h->next;
-	}
-}
-
-/**
  * add_dnodeint - adds new node at begining of stack_t list
  * @head: pointer to head
  * @n: value of head
  * Return: address of new element or NULL if failed
  */
 
-stack_t *add_dnodeint(stack_t **head, const int n)
+void *add_dnodeint(stack_t **head, int n)
 {
 	stack_t *new;
-	stack_t *temp;
+	stack_t *head2;
 
 	new = malloc(sizeof(stack_t));
 	if (new == NULL)
 		return (NULL);
 	new->n = n;
 	new->prev = NULL;
-	temp = *head;
-	if (temp != NULL)
+	head2 = *head;
+	if (head2 != NULL)
 	{
-		while (temp->prev != NULL)
-			temp = temp->prev;
+		while (head2->prev != NULL)
+			head2 = head2->prev;
 	}
-	new->next = temp;
-	if (temp != NULL)
-		temp->prev = new;
+	new->next = head2;
+	if (head2 != NULL)
+		head2->prev = new;
 	*head = new;
-	return (new);
 }
 
 /**
@@ -73,7 +54,7 @@ stack_t *add_dnodeint(stack_t **head, const int n)
  * Return: address of new element or NULL
  */
 
-stack_t *add_dnodeint_end(stack_t **head, const int n)
+stack_t *add_dnodeint_end(stack_t **head, int n)
 {
 	stack_t *new;
 	stack_t *temp;

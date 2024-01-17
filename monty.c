@@ -17,6 +17,6 @@ int main(int ac, char **av)
 		fprintf(stderr, "USAGE: monty file\n");
 		error_exit(&stack);
 	}
-	handle_file(av[1], &stack);
+	handle_file(av[1], stack);
 	return (0);
 }

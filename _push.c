@@ -9,20 +9,22 @@
 
 void _push(stack_t **head, unsigned int count)
 {
-	int a, b = 0;
+	int a = 0, b = 0, is_number = 1;
+	stack_t *temp;
 
 	if (store.args)
 	{
-		if (strcmp(&store.args[b], "-"))
+		if (store.args[b] > 57 && store.args[b] < 48)
 			b++;
 		for (; store.args[b] != '\0'; b++)
 		{
-			printf("%s", store.args[b]);
-			if (store.args[b] > 48 && store.args[b] < 57)
-			{
-				fprintf(stderr, "L%d: usage: push integer\n", count);
-				error_command(head);
-			}
+			if (store.args[b] > 57 && store.args[b] < 48)
+				is_number = 0;
+		}
+		if (is_number == 0)
+		{
+			fprintf(stderr, "L%d: usage: push integer\n", count);
+			error_command(head);
 		}
 	}
 	else
@@ -31,5 +33,8 @@ void _push(stack_t **head, unsigned int count)
 		error_command(head);
 	}
 	a = atoi(store.args);
-	add_dnodeint(head, a);
+	if (store.change == 0)
+		add_dnodeint(head, a);
+	else
+		add_dnodeint_end(head, a);
 }
