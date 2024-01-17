@@ -34,6 +34,5 @@ void _div(stack_t **head, unsigned int count)
 	b = temp->next->n / temp->n;
 	temp->next->n = b;
 	*head = temp->next;
-	temp->next->prev = NULL;
 	free(temp);
 }
