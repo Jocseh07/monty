@@ -34,5 +34,4 @@ void _div(stack_t **head, unsigned int count)
 	b = temp->next->n / temp->n;
 	delete_dnodeint_at_index(head, 0);
 	(*head)->n = b;
-	free(temp);
 }

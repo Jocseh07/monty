@@ -85,14 +85,14 @@ void *add_dnodeint_end(stack_t **head, int n)
  * Return: 1 ifsucceeded of -1 if failed
  */
 
-int delete_dnodeint_at_index(stack_t **head, unsigned int index)
+void delete_dnodeint_at_index(stack_t **head, unsigned int index)
 {
 	unsigned int a = 0;
 	stack_t *temp;
 
 	temp = *head;
 	if (temp == NULL)
-		return (-1);
+		return;
 
 	while (temp->prev != NULL)
 		temp = temp->prev;
@@ -104,7 +104,7 @@ int delete_dnodeint_at_index(stack_t **head, unsigned int index)
 		temp = temp->next;
 	}
 	if (a < index)
-		return (-1);
+		return;
 	if (a == 0)
 	{
 		*head = temp->next;
@@ -118,6 +118,4 @@ int delete_dnodeint_at_index(stack_t **head, unsigned int index)
 			temp->next->prev = temp->prev;
 	}
 	free(temp);
-
-	return (1);
 }

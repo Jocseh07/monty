@@ -60,7 +60,7 @@ typedef struct instruction_s
 void free_dlistint(stack_t *head);
 void *add_dnodeint(stack_t **head, int n);
 void *add_dnodeint_end(stack_t **head, int n);
-int delete_dnodeint_at_index(stack_t **head, unsigned int index);
+void delete_dnodeint_at_index(stack_t **head, unsigned int index);
 void error_exit(stack_t **stack);
 void error_command(stack_t **stack);
 int main(int ac, char **av);
