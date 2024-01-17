@@ -14,12 +14,18 @@ void _div(stack_t **head, unsigned int count)
 	(void)count;
 
 	temp = *head;
-
-	if (temp && temp->next)
+	while (temp)
 	{
-		fprintf(stderr, "L%d: can't sub, stack too short\n", count);
+		temp = temp->next;
+		a++;
+	}
+
+	if (a < 2)
+	{
+		fprintf(stderr, "L%d: can't div, stack too short\n", count);
 		error_command(head);
 	}
+	temp = *head;
 	if (temp->n == 0)
 	{
 		fprintf(stderr, "L%d: division by zero\n", count);
