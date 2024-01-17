@@ -7,10 +7,11 @@
  * Return: None
  */
 
-void _rotr(stack_t **head, __attribute__((unused)) unsigned int count)
+void _rotr(stack_t **head, unsigned int count)
 {
 	stack_t *temp;
 	stack_t *temp2;
+	(void)count;prettierprettier
 
 	temp = *head;
 	if (temp == NULL && temp->next == NULL)

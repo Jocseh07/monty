@@ -1,5 +1,4 @@
 #include "monty.h"
-store_t store = {NULL, NULL, NULL, 0};
 
 /**
  * main - main function of the program

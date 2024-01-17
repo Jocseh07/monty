@@ -7,7 +7,10 @@
  * Return: None
  */
 
-void _stack(__attribute__((unused)) stack_t **head, __attribute__((unused)) unsigned int count)
+void _stack(stack_t **head, unsigned int count)
 {
+	(void)count;
+	(void)head;
+
 	store.change = 0;
 }

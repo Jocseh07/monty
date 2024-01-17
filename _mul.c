@@ -7,10 +7,11 @@
  * Return: None
  */
 
-void _mul(stack_t **head, __attribute__((unused)) unsigned int count)
+void _mul(stack_t **head, unsigned int count)
 {
 	stack_t *temp;
 	int a = 0, b = 0;
+	(void)count;
 
 	temp = *head;
 	while (temp)

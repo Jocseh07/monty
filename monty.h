@@ -26,7 +26,7 @@ typedef struct stack_s
 
 /**
  * struct store_s - store args, files, linecontent
- * @arg: value stored
+ * @args: value stored
  * @file: pointer to file
  * @content: content of the file
  * @change: for either stack or queue
@@ -41,6 +41,7 @@ typedef struct store_s
 	int change;
 } store_t;
 extern store_t store;
+store_t store = {NULL, NULL, NULL, 0};
 
 /**
  * struct instruction_s - opcode and its function
@@ -67,20 +68,20 @@ int handle_file(char *filename, stack_t *stack);
 int handle_execute(stack_t **stack, unsigned int count);
 void _push(stack_t **head, unsigned int count);
 void _pall(stack_t **head, unsigned int count);
-void _pint(stack_t **head, __attribute__((unused)) unsigned int count);
-void _pop(stack_t **head, __attribute__((unused)) unsigned int count);
-void _swap(stack_t **head, __attribute__((unused)) unsigned int count);
-void _add(stack_t **head, __attribute__((unused)) unsigned int count);
-void _nop(__attribute__((unused)) stack_t **head, __attribute__((unused)) unsigned int count);
-void _sub(stack_t **head, __attribute__((unused)) unsigned int count);
-void _div(stack_t **head, __attribute__((unused)) unsigned int count);
-void _mul(stack_t **head, __attribute__((unused)) unsigned int count);
-void _mod(stack_t **head, __attribute__((unused)) unsigned int count);
-void _pchar(stack_t **head, __attribute__((unused)) unsigned int count);
-void _pstr(stack_t **head, __attribute__((unused)) unsigned int count);
-void _rotl(stack_t **head, __attribute__((unused)) unsigned int count);
-void _rotr(stack_t **head, __attribute__((unused)) unsigned int count);
-void _queue(__attribute__((unused)) stack_t **head, __attribute__((unused)) unsigned int count);
-void _stack(__attribute__((unused)) stack_t **head, __attribute__((unused)) unsigned int count);
+void _pint(stack_t **head, unsigned int count);
+void _pop(stack_t **head, unsigned int count);
+void _swap(stack_t **head, unsigned int count);
+void _add(stack_t **head, unsigned int count);
+void _nop(stack_t **head, unsigned int count);
+void _sub(stack_t **head, unsigned int count);
+void _div(stack_t **head, unsigned int count);
+void _mul(stack_t **head, unsigned int count);
+void _mod(stack_t **head, unsigned int count);
+void _pchar(stack_t **head, unsigned int count);
+void _pstr(stack_t **head, unsigned int count);
+void _rotl(stack_t **head, unsigned int count);
+void _rotr(stack_t **head, unsigned int count);
+void _queue(stack_t **head, unsigned int count);
+void _stack(stack_t **head, unsigned int count);
 
 #endif

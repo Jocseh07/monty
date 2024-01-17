@@ -7,8 +7,9 @@
  * Return: None
  */
 
-void _pint(stack_t **head, __attribute__((unused)) unsigned int count)
+void _pint(stack_t **head, unsigned int count)
 {
+	(void)count;
 
 	if (*head == NULL)
 	{

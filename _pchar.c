@@ -7,8 +7,9 @@
  * Return: None
  */
 
-void _pchar(stack_t **head, __attribute__((unused)) unsigned int count)
+void _pchar(stack_t **head, unsigned int count)
 {
+	(void)count;
 
 	if (*head == NULL)
 	{

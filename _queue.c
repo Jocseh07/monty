@@ -7,7 +7,11 @@
  * Return: None
  */
 
-void _queue(__attribute__((unused)) stack_t **head, __attribute__((unused)) unsigned int count)
+void _queue(stack_t **head, unsigned int count)
 {
+	(void)count;
+	(void)head;
+
 	store.change = 1;
 }
+prettier

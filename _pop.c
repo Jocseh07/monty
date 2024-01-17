@@ -7,9 +7,10 @@
  * Return: None
  */
 
-void _pop(stack_t **head, __attribute__((unused)) unsigned int count)
+void _pop(stack_t **head, unsigned int count)
 {
 	stack_t *temp;
+	(void)count;
 
 	if (*head == NULL)
 	{
