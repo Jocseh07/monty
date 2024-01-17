@@ -45,16 +45,17 @@ void *add_dnodeint(stack_t **head, int n)
 	if (head2 != NULL)
 		head2->prev = new;
 	*head = new;
+	return (new);
 }
 
 /**
  * add_dnodeint_end - adds a new node at the end of a list
  * @head: head of the list
  * @n: element to add
- * Return: address of new element or NULL
+ * Return: None
  */
 
-stack_t *add_dnodeint_end(stack_t **head, int n)
+void *add_dnodeint_end(stack_t **head, int n)
 {
 	stack_t *new;
 	stack_t *temp;

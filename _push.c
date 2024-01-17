@@ -10,7 +10,6 @@
 void _push(stack_t **head, unsigned int count)
 {
 	int a = 0, b = 0, is_number = 1;
-	stack_t *temp;
 
 	if (store.args)
 	{
