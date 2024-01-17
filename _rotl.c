@@ -11,7 +11,20 @@ void _rotl(stack_t **head, unsigned int count)
 {
 	stack_t *temp;
 	stack_t *temp2;
+	int a;
 	(void)count;
+
+	temp = *head;
+	while (temp)
+	{
+		temp = temp->next;
+		a++;
+	}
+	if (a < 2)
+	{
+		fprintf(stderr, "L%d: can't rotl, stack too short\n", count);
+		error_command(head);
+	}
 
 	temp = *head;
 	if (temp == NULL && temp->next == NULL)
