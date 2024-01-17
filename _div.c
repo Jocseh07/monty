@@ -32,7 +32,7 @@ void _div(stack_t **head, unsigned int count)
 		error_command(head);
 	}
 	b = temp->next->n / temp->n;
-	temp->next->n = b;
-	*head = temp->next;
+	delete_dnodeint_at_index(head, 0);
+	(*head)->n = b;
 	free(temp);
 }

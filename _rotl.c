@@ -1,8 +1,7 @@
 #include "monty.h"
 
 /**
- * _rotl - rotate left		h = h->next;
-		len++;
+ * _rotl - rotate left
  * @head: stack head
  * @count: line number
  * Return: None
