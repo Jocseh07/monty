@@ -11,7 +11,7 @@ void _rotr(stack_t **head, unsigned int count)
 {
 	stack_t *temp;
 	stack_t *temp2;
-	(void)count;prettierprettier
+	(void)count;
 
 	temp = *head;
 	if (temp == NULL && temp->next == NULL)

@@ -14,4 +14,3 @@ void _queue(stack_t **head, unsigned int count)
 
 	store.change = 1;
 }
-prettier

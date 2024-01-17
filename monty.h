@@ -41,7 +41,6 @@ typedef struct store_s
 	int change;
 } store_t;
 extern store_t store;
-store_t store = {NULL, NULL, NULL, 0};
 
 /**
  * struct instruction_s - opcode and its function

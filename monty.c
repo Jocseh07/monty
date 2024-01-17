@@ -11,6 +11,8 @@ int main(int ac, char **av)
 {
 	stack_t *stack = NULL;
 
+	__attribute((unused)) store_t store = {NULL, NULL, NULL, 0};
+
 	if (ac != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
