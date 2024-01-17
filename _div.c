@@ -10,7 +10,8 @@
 void _div(stack_t **head, unsigned int count)
 {
 	stack_t *temp;
-	int a = 0, b = 0;
+	int a = 0;
+	float b = 0;
 	(void)count;
 
 	temp = *head;
