@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * _rotr - add top 2 of stack
+ * _rotr - rotate right
  * @head: stack head
  * @count: line number
  * Return: None

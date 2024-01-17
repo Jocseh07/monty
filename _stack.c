@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * _stack - do nothing
+ * _stack - change to stack
  * @head: stack head
  * @count: line number
  * Return: None

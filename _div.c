@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * _div - sub top 2 of stack
+ * _div - divide top 2 of stack
  * @head: stack head
  * @count: line number
  * Return: None

@@ -17,7 +17,7 @@ void _push(stack_t **head, unsigned int count)
 			b++;
 		for (; store.args[b] != '\0'; b++)
 		{
-			if (store.args[b] > 57 && store.args[b] < 48)
+			if (isdigit(store.args[b] == 0))
 				is_number = 0;
 		}
 		if (is_number == 0)

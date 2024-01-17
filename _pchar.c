@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * _pchar - prints the top of stack
+ * _pchar - prints char in ascii
  * @head: stack head
  * @count: line number
  * Return: None

@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * _mod - sub top 2 of stack
+ * _mod - find mod of top 2 of stack
  * @head: stack head
  * @count: line number
  * Return: None

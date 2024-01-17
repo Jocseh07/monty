@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * _queue - do nothing
+ * _queue - change to queue
  * @head: stack head
  * @count: line number
  * Return: None
