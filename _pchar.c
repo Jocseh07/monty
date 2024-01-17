@@ -10,17 +10,18 @@
 void _pchar(stack_t **head, unsigned int count)
 {
 	(void)count;
+	stack_t *temp;
 
-	if (*head == NULL)
+	if (temp == NULL)
 	{
 		fprintf(stderr, "L%d: can't pchar, stack empty\n", count);
 		error_command(head);
 	}
-	if ((*head)->n > 127 || (*head)->n < 0)
+	if (temp->n > 127 || temp->n < 0)
 	{
 		fprintf(stderr, "L%d: can't pchar, value out of range\n", count);
 		error_command(head);
 	}
 
-	printf("%c\n", (*head)->n);
+	printf("%c\n", temp->n);
 }
