@@ -13,11 +13,11 @@ void _push(stack_t **head, unsigned int count)
 
 	if (store.args)
 	{
-		if (isdigit(store.args[b] == '-'))
+		if (isdigit(store.args[b]) == 0)
 			b++;
 		for (; store.args[b] != '\0'; b++)
 		{
-			if (isdigit(store.args[b] == 0))
+			if (isdigit(store.args[b]) == 0)
 				is_number = 0;
 		}
 		if (is_number == 0)
