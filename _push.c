@@ -13,7 +13,7 @@ void _push(stack_t **head, unsigned int count)
 
 	if (store.args)
 	{
-		if (store.args[0] == '#')
+		if (store.args[0] == '-')
 			b++;
 		for (; store.args[b] != '\0'; b++)
 		{
